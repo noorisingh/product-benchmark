@@ -31,6 +31,19 @@ const C = {
 };
 
 // ─────────────────────────────────────────────
+// METRIC COLOR HELPER
+// Reads --metric-color and --metric-color-mid CSS vars from the
+// containing section so charts automatically match their section color.
+// ─────────────────────────────────────────────
+function getMetricColors(container) {
+  const section = container.closest('section') || document.documentElement;
+  const cs = getComputedStyle(section);
+  const accent = cs.getPropertyValue('--metric-color').trim() || C.blue;
+  const mid    = cs.getPropertyValue('--metric-color-mid').trim() || C.periwinkle;
+  return { accent, mid };
+}
+
+// ─────────────────────────────────────────────
 // TOOLTIP HELPER
 // ─────────────────────────────────────────────
 function createTooltip(container) {
@@ -87,6 +100,7 @@ export function drawGroupedBarChart(containerId, dataKey, mode = 'all') {
   const g = svg.append('g').attr('transform', `translate(${MARGIN.left},${MARGIN.top})`);
 
   const tooltip = createTooltip(container);
+  const { accent, mid } = getMetricColors(container);
 
   // Scales
   const x0 = d3.scaleBand().domain(groups).range([0, W]).padding(0.25);
@@ -111,8 +125,8 @@ export function drawGroupedBarChart(containerId, dataKey, mode = 'all') {
     .call(gg => gg.select('.domain').remove())
     .selectAll('text').style('font-size', '12px').style('fill', C.gray50);
 
-  // Bar colors & labels
-  const colors = { p50: C.gray30, p75: C.periwinkle, p90: C.blue };
+  // Bar colors & labels — p90/p75 use section metric color
+  const colors = { p50: C.gray30, p75: mid, p90: accent };
   const labels = { p50: '50th', p75: '75th', p90: '90th' };
 
   // Bars
@@ -160,7 +174,7 @@ export function drawGroupedBarChart(containerId, dataKey, mode = 'all') {
       .attr('text-anchor', 'middle')
       .style('font-size', '11px')
       .style('font-weight', '600')
-      .style('fill', C.blue)
+      .style('fill', accent)
       .style('opacity', 0)
       .text(`${val}%`)
       .transition().duration(600).delay(i * 80 + 500).style('opacity', 1);
@@ -190,6 +204,7 @@ export function drawLineChart(containerId, dataKey, mode = 'all') {
 
   const g = svg.append('g').attr('transform', `translate(${MARGIN.left},${MARGIN.top})`);
   const tooltip = createTooltip(container);
+  const { accent, mid } = getMetricColors(container);
 
   const xScale = d3.scalePoint().domain(xLabels).range([0, W]).padding(0.3);
   const maxVal = d3.max(['p50','p75','p90'], k => d3.max(modeData[k]));
@@ -212,7 +227,7 @@ export function drawLineChart(containerId, dataKey, mode = 'all') {
     .call(gg => gg.select('.domain').remove())
     .selectAll('text').style('font-size', '12px').style('fill', C.gray50);
 
-  const lineColors = { p50: C.gray30, p75: C.periwinkle, p90: C.blue };
+  const lineColors = { p50: C.gray30, p75: mid, p90: accent };
   const lineWidths = { p50: 2, p75: 2.5, p90: 3 };
   const pcts = ['p50', 'p75', 'p90'];
 
@@ -253,7 +268,7 @@ export function drawLineChart(containerId, dataKey, mode = 'all') {
 
       g.append('path')
         .datum(vals)
-        .attr('fill', C.blue)
+        .attr('fill', accent)
         .attr('fill-opacity', 0)
         .attr('d', areaGen)
         .transition().duration(1000).delay(600)
@@ -291,10 +306,11 @@ export function drawDotChart(containerId, dataKey) {
 
   const source = dataKey === 'acquisition' ? acquisitionGrowthOverYear : engagementGrowthOverYear;
   const months = source.months;
+  const { accent, mid } = getMetricColors(container);
   const groups = [
-    { key: 'p90', label: '90th Percentile', color: C.blue,       endVal: source.all.p90[11] },
-    { key: 'p75', label: '75th Percentile', color: C.periwinkle, endVal: source.all.p75[11] },
-    { key: 'p50', label: '50th Percentile', color: C.gray30,     endVal: source.all.p50[11] },
+    { key: 'p90', label: '90th Percentile', color: accent, endVal: source.all.p90[11] },
+    { key: 'p75', label: '75th Percentile', color: mid,    endVal: source.all.p75[11] },
+    { key: 'p50', label: '50th Percentile', color: C.gray30, endVal: source.all.p50[11] },
   ];
 
   const W = getWidth(container);
