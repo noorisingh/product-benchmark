@@ -69,14 +69,16 @@ export const acquisitionGrowthOverYear = {
 // Values represent flow weights (roughly equal distribution)
 export const acquisitionRetentionSankey = {
   nodes: [
-    { id: 'acq-q4', label: 'Top 25%', side: 'left', color: '#0052F2' },
-    { id: 'acq-q3', label: 'Upper Mid', side: 'left', color: '#6980FF' },
-    { id: 'acq-q2', label: 'Lower Mid', side: 'left', color: '#9FA5AD' },
-    { id: 'acq-q1', label: 'Bottom 25%', side: 'left', color: '#D5D9E0' },
-    { id: 'ret-q4', label: 'Top 25%', side: 'right', color: '#0052F2' },
-    { id: 'ret-q3', label: 'Upper Mid', side: 'right', color: '#6980FF' },
-    { id: 'ret-q2', label: 'Lower Mid', side: 'right', color: '#9FA5AD' },
-    { id: 'ret-q1', label: 'Bottom 25%', side: 'right', color: '#D5D9E0' },
+    // Left = Acquisition (red/coral family, dark → light — matches PDF)
+    { id: 'acq-q4', label: 'Top 25%',    side: 'left',  color: '#7B2A27' },
+    { id: 'acq-q3', label: 'Upper Mid',  side: 'left',  color: '#D14F4A' },
+    { id: 'acq-q2', label: 'Lower Mid',  side: 'left',  color: '#FF7E79' },
+    { id: 'acq-q1', label: 'Bottom 25%', side: 'left',  color: '#FFCBC9' },
+    // Right = Retention (Amplitude Blue family, dark → light — matches PDF)
+    { id: 'ret-q4', label: 'Top 25%',    side: 'right', color: '#002CB6' },
+    { id: 'ret-q3', label: 'Upper Mid',  side: 'right', color: '#0051F7' },
+    { id: 'ret-q2', label: 'Lower Mid',  side: 'right', color: '#6980FF' },
+    { id: 'ret-q1', label: 'Bottom 25%', side: 'right', color: '#A4BAFF' },
   ],
   // Roughly even: each left node splits ~25/25/25/25 to right nodes
   links: [
@@ -127,14 +129,16 @@ export const activationRate = {
 // Sankey: activation → retention (strong correlation)
 export const activationRetentionSankey = {
   nodes: [
-    { id: 'act-q4', label: 'Top 25%', side: 'left', color: '#0052F2' },
-    { id: 'act-q3', label: 'Upper Mid', side: 'left', color: '#6980FF' },
-    { id: 'act-q2', label: 'Lower Mid', side: 'left', color: '#9FA5AD' },
-    { id: 'act-q1', label: 'Bottom 25%', side: 'left', color: '#D5D9E0' },
-    { id: 'ret-q4', label: 'Top 25%', side: 'right', color: '#0052F2' },
-    { id: 'ret-q3', label: 'Upper Mid', side: 'right', color: '#6980FF' },
-    { id: 'ret-q2', label: 'Lower Mid', side: 'right', color: '#9FA5AD' },
-    { id: 'ret-q1', label: 'Bottom 25%', side: 'right', color: '#D5D9E0' },
+    // Left = Activation (purple family, dark → light — matches PDF)
+    { id: 'act-q4', label: 'Top 25%',    side: 'left',  color: '#371B58' },
+    { id: 'act-q3', label: 'Upper Mid',  side: 'left',  color: '#7141AE' },
+    { id: 'act-q2', label: 'Lower Mid',  side: 'left',  color: '#B474FF' },
+    { id: 'act-q1', label: 'Bottom 25%', side: 'left',  color: '#DCADFF' },
+    // Right = Retention (Amplitude Blue family, dark → light — matches PDF)
+    { id: 'ret-q4', label: 'Top 25%',    side: 'right', color: '#002CB6' },
+    { id: 'ret-q3', label: 'Upper Mid',  side: 'right', color: '#0051F7' },
+    { id: 'ret-q2', label: 'Lower Mid',  side: 'right', color: '#6980FF' },
+    { id: 'ret-q1', label: 'Bottom 25%', side: 'right', color: '#A4BAFF' },
   ],
   // Strong positive correlation: top→top, bottom→bottom dominate
   links: [
@@ -195,14 +199,16 @@ export const engagementGrowthOverYear = {
 // Sankey: engagement → retention (no strong relationship)
 export const engagementRetentionSankey = {
   nodes: [
-    { id: 'eng-q4', label: 'Top 25%', side: 'left', color: '#0052F2' },
-    { id: 'eng-q3', label: 'Upper Mid', side: 'left', color: '#6980FF' },
-    { id: 'eng-q2', label: 'Lower Mid', side: 'left', color: '#9FA5AD' },
-    { id: 'eng-q1', label: 'Bottom 25%', side: 'left', color: '#D5D9E0' },
-    { id: 'ret-q4', label: 'Top 25%', side: 'right', color: '#0052F2' },
-    { id: 'ret-q3', label: 'Upper Mid', side: 'right', color: '#6980FF' },
-    { id: 'ret-q2', label: 'Lower Mid', side: 'right', color: '#9FA5AD' },
-    { id: 'ret-q1', label: 'Bottom 25%', side: 'right', color: '#D5D9E0' },
+    // Left = Engagement (navy/indigo family, dark → light — matches PDF)
+    { id: 'eng-q4', label: 'Top 25%',    side: 'left',  color: '#12225B' },
+    { id: 'eng-q3', label: 'Upper Mid',  side: 'left',  color: '#324EB4' },
+    { id: 'eng-q2', label: 'Lower Mid',  side: 'left',  color: '#5E81FF' },
+    { id: 'eng-q1', label: 'Bottom 25%', side: 'left',  color: '#A4BAFF' },
+    // Right = Retention (Amplitude Blue family, dark → light — matches PDF)
+    { id: 'ret-q4', label: 'Top 25%',    side: 'right', color: '#002CB6' },
+    { id: 'ret-q3', label: 'Upper Mid',  side: 'right', color: '#0051F7' },
+    { id: 'ret-q2', label: 'Lower Mid',  side: 'right', color: '#6980FF' },
+    { id: 'ret-q1', label: 'Bottom 25%', side: 'right', color: '#A4BAFF' },
   ],
   // Roughly even distribution, small strand top→top
   links: [
