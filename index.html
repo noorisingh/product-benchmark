@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Benchmark Report — Amplitude</title>
+  <meta name="description" content="Exclusive Amplitude data that reveals how top products win and grow. Benchmarks across acquisition, activation, engagement, and retention for 2,600+ companies." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=IBM+Plex+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── SCROLL PROGRESS BAR ── -->
+  <div id="progress-bar" aria-hidden="true"></div>
+
+  <!-- ── STICKY NAV ── -->
+  <nav id="main-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Amplitude home">
+        <svg width="120" height="28" viewBox="0 0 120 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <text x="0" y="22" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="20" fill="currentColor">amplitude</text>
+        </svg>
+      </a>
+
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#overview"    class="nav-link" data-section="overview">Overview</a></li>
+        <li><a href="#acquisition" class="nav-link" data-section="acquisition">Acquisition</a></li>
+        <li><a href="#activation"  class="nav-link" data-section="activation">Activation</a></li>
+        <li><a href="#engagement"  class="nav-link" data-section="engagement">Engagement</a></li>
+        <li><a href="#retention"   class="nav-link" data-section="retention">Retention</a></li>
+        <li><a href="#industries"  class="nav-link" data-section="industries">Industries</a></li>
+        <li><a href="#methodology" class="nav-link" data-section="methodology">Methodology</a></li>
+      </ul>
+    </div>
+
+    <!-- Mobile menu overlay -->
+    <div class="nav-mobile-overlay" id="nav-mobile-overlay" aria-hidden="true">
+      <ul class="nav-mobile-links" role="list">
+        <li><a href="#overview"    class="nav-mobile-link">Overview</a></li>
+        <li><a href="#acquisition" class="nav-mobile-link">Acquisition</a></li>
+        <li><a href="#activation"  class="nav-mobile-link">Activation</a></li>
+        <li><a href="#engagement"  class="nav-mobile-link">Engagement</a></li>
+        <li><a href="#retention"   class="nav-mobile-link">Retention</a></li>
+        <li><a href="#industries"  class="nav-mobile-link">Industries</a></li>
+        <li><a href="#methodology" class="nav-mobile-link">Methodology</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 1 — HERO
+  ═══════════════════════════════════════ -->
+  <section id="hero" class="section section--hero" aria-labelledby="hero-headline">
+    <div class="hero-bg-gradient" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow">Amplitude Data Report · 2024</div>
+        <h1 id="hero-headline" class="hero-headline">Product<br>Benchmark<br>Report</h1>
+        <p class="hero-subhead">Exclusive Amplitude data that reveals<br>how top products win and grow</p>
+
+        <div class="hero-stats" aria-label="Report methodology statistics">
+          <div class="hero-stat" data-count="2600" data-suffix="+" data-label="Companies">
+            <span class="hero-stat__number"><span class="counter">0</span><span class="hero-stat__suffix">+</span></span>
+            <span class="hero-stat__label">Companies</span>
+          </div>
+          <div class="hero-stat" data-count="10600" data-suffix="+" data-label="Digital Products">
+            <span class="hero-stat__number"><span class="counter">0</span><span class="hero-stat__suffix">+</span></span>
+            <span class="hero-stat__label">Digital Products</span>
+          </div>
+          <div class="hero-stat" data-count="17" data-suffix="" data-label="Industries">
+            <span class="hero-stat__number"><span class="counter">0</span><span class="hero-stat__suffix"></span></span>
+            <span class="hero-stat__label">Industries</span>
+          </div>
+          <div class="hero-stat" data-count="171" data-suffix="B" data-label="Monthly Users">
+            <span class="hero-stat__number"><span class="counter">0</span><span class="hero-stat__suffix">B</span></span>
+            <span class="hero-stat__label">Monthly Users</span>
+          </div>
+          <div class="hero-stat" data-count="102" data-suffix="" data-label="Countries">
+            <span class="hero-stat__number"><span class="counter">0</span><span class="hero-stat__suffix"></span></span>
+            <span class="hero-stat__label">Countries</span>
+          </div>
+          <div class="hero-stat" data-count="93" data-suffix="B" data-label="New Users">
+            <span class="hero-stat__number"><span class="counter">0</span><span class="hero-stat__suffix">B</span></span>
+            <span class="hero-stat__label">New Users</span>
+          </div>
+        </div>
+
+        <div class="hero-cta-group">
+          <a href="#overview" class="btn btn--primary btn--large">Explore the Data</a>
+          <a href="#" class="btn btn--ghost btn--large" id="download-pdf-btn">Download PDF</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll to explore</span>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 2 — OVERVIEW / HOW TOP PRODUCTS GROW
+  ═══════════════════════════════════════ -->
+  <section id="overview" class="section section--light" aria-labelledby="overview-headline">
+    <div class="section-divider section-divider--top" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">
+          <button class="share-btn" data-section="overview" aria-label="Copy link to Overview section">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8.5 1.5H12.5V5.5M12.5 1.5L6 8M5.5 3.5H2.5C1.95 3.5 1.5 3.95 1.5 4.5V11.5C1.5 12.05 1.95 12.5 2.5 12.5H9.5C10.05 12.5 10.5 12.05 10.5 11.5V8.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          01 — How Top Products Grow
+        </div>
+        <h2 id="overview-headline" class="section-headline">What if you could learn how the world's best products grow?</h2>
+        <p class="section-lead">These insights are often out of reach for most organizations. We analyzed over 2,600 companies and 10,600 digital products to surface what the top 10% are doing differently.</p>
+      </div>
+
+      <div class="insight-cards" role="list">
+        <div class="insight-card" role="listitem">
+          <div class="insight-card__num">01</div>
+          <div class="insight-card__stat">Top 10%</div>
+          <p class="insight-card__body">outperform the rest across every key metric — acquisition, activation, engagement, and retention.</p>
+        </div>
+        <div class="insight-card" role="listitem">
+          <div class="insight-card__num">02</div>
+          <div class="insight-card__stat">&gt;80%</div>
+          <p class="insight-card__body">of all new users go to just 10% of products, leaving the rest to compete for a shrinking share.</p>
+        </div>
+        <div class="insight-card" role="listitem">
+          <div class="insight-card__num">03</div>
+          <div class="insight-card__stat">69%</div>
+          <p class="insight-card__body">of top performers in 7-day activation were also top performers in 3-month retention. Win the first week.</p>
+        </div>
+        <div class="insight-card" role="listitem">
+          <div class="insight-card__num">04</div>
+          <div class="insight-card__stat">Zero</div>
+          <p class="insight-card__body">correlation between acquisition speed and long-term retention. Fast growth doesn't equal loyal users.</p>
+        </div>
+      </div>
+
+      <blockquote class="pullquote">
+        <p>"The most successful growth companies earn <strong>80% of their value from existing customers.</strong>"</p>
+        <cite>— McKinsey</cite>
+      </blockquote>
+    </div>
+    <div class="section-divider section-divider--bottom" aria-hidden="true"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 3 — ACQUISITION
+  ═══════════════════════════════════════ -->
+  <section id="acquisition" class="section section--grey" aria-labelledby="acquisition-headline">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">
+          <button class="share-btn" data-section="acquisition" aria-label="Copy link to Acquisition section">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8.5 1.5H12.5V5.5M12.5 1.5L6 8M5.5 3.5H2.5C1.95 3.5 1.5 3.95 1.5 4.5V11.5C1.5 12.05 1.95 12.5 2.5 12.5H9.5C10.05 12.5 10.5 12.05 10.5 11.5V8.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          02 — Acquisition
+        </div>
+        <h2 id="acquisition-headline" class="section-headline">The top 10% grew nearly<br><em class="stat-em">9× faster</em> than the median.</h2>
+        <p class="section-def"><strong>Acquisition</strong> — The addition of new users to your product over a period of time.</p>
+      </div>
+
+      <!-- Enterprise Toggle -->
+      <div class="enterprise-toggle-wrapper">
+        <div class="enterprise-toggle" role="group" aria-label="Toggle between all products and enterprise data">
+          <button class="toggle-btn toggle-btn--active" data-mode="all" id="acq-toggle-all">All Products</button>
+          <button class="toggle-btn" data-mode="enterprise" id="acq-toggle-ent">Enterprise</button>
+        </div>
+      </div>
+
+      <!-- Chart A: Grouped Bar -->
+      <div class="chart-block">
+        <div class="chart-block__header">
+          <h3 class="chart-title">New User Growth Rate</h3>
+          <p class="chart-subtitle">Daily, weekly, and monthly new user growth rates across percentiles</p>
+        </div>
+        <div class="chart-legend">
+          <span class="legend-item"><span class="legend-dot" style="background:var(--gray-30)"></span>50th Percentile (Median)</span>
+          <span class="legend-item"><span class="legend-dot" style="background:var(--color-periwinkle)"></span>75th Percentile</span>
+          <span class="legend-item"><span class="legend-dot" style="background:var(--color-blue)"></span>90th Percentile (Top 10%)</span>
+        </div>
+        <div id="chart-acq-bar" class="chart-container" role="img" aria-label="Grouped bar chart showing new user growth rates"></div>
+      </div>
+
+      <!-- Callout Stat -->
+      <div class="big-callout">
+        <div class="big-callout__stat">&gt;80%</div>
+        <div class="big-callout__text">of all new users go to just 10% of products</div>
+      </div>
+
+      <!-- Chart B: Growth Over Year (Dot Animation) -->
+      <div class="chart-block">
+        <div class="chart-block__header">
+          <h3 class="chart-title">Growth Over a Year</h3>
+          <p class="chart-subtitle">Starting with 100 users in January — where does each group end up?</p>
+        </div>
+        <div id="chart-acq-dots" class="chart-container chart-container--dots" role="img" aria-label="Animated dot visualization showing user growth over a year"></div>
+        <div class="chart-annotation">
+          <strong>274 vs 103</strong> — same starting point, one year later.
+        </div>
+      </div>
+
+      <!-- Chart C: Sankey — Acquisition vs Retention -->
+      <div class="chart-block">
+        <div class="chart-block__header">
+          <h3 class="chart-title">Acquisition vs. Retention</h3>
+          <p class="chart-subtitle">Does acquiring more users lead to better retention? The data says no.</p>
+        </div>
+        <div id="chart-acq-sankey" class="chart-container chart-container--sankey" role="img" aria-label="Sankey diagram showing acquisition quartile relationship to retention quartile"></div>
+        <!-- Mobile fallback -->
+        <div id="chart-acq-sankey-mobile" class="chart-container chart-container--sankey-mobile" role="img" aria-label="Bar chart showing acquisition vs retention relationship on mobile"></div>
+        <div class="chart-insight">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="var(--color-blue)" stroke-width="1.5"/><path d="M8 7v5M8 5v.5" stroke="var(--color-blue)" stroke-width="1.5" stroke-linecap="round"/></svg>
+          There's no correlation between acquisition and retention performance. Every acquisition quartile distributes almost evenly across all retention quartiles.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 4 — ACTIVATION
+  ═══════════════════════════════════════ -->
+  <section id="activation" class="section section--light" aria-labelledby="activation-headline">
+    <div class="section-divider section-divider--top" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">
+          <button class="share-btn" data-section="activation" aria-label="Copy link to Activation section">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8.5 1.5H12.5V5.5M12.5 1.5L6 8M5.5 3.5H2.5C1.95 3.5 1.5 3.95 1.5 4.5V11.5C1.5 12.05 1.95 12.5 2.5 12.5H9.5C10.05 12.5 10.5 12.05 10.5 11.5V8.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          03 — Activation
+        </div>
+        <h2 id="activation-headline" class="section-headline"><em class="stat-em">4× difference</em> in Day 1 activation between the top 10% and the median.</h2>
+        <p class="section-def"><strong>Activation</strong> — The percentage of new users who return to your product on a specified day shortly after their first visit.</p>
+      </div>
+
+      <!-- Magic Number Callout -->
+      <div class="magic-number">
+        <div class="magic-number__inner">
+          <div class="magic-number__num">7</div>
+          <div class="magic-number__text">
+            <strong>The magic number</strong>
+            <p>Having at least 7% of your users return on Day 7 places you in the top 25% for activation — a group that consistently sees stronger 3-month retention.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enterprise Toggle -->
+      <div class="enterprise-toggle-wrapper">
+        <div class="enterprise-toggle" role="group" aria-label="Toggle between all products and enterprise data">
+          <button class="toggle-btn toggle-btn--active" data-mode="all" id="act-toggle-all">All Products</button>
+          <button class="toggle-btn" data-mode="enterprise" id="act-toggle-ent">Enterprise</button>
+        </div>
+      </div>
+
+      <!-- Chart D: Multi-line Activation -->
+      <div class="chart-block">
+        <div class="chart-block__header">
+          <h3 class="chart-title">Activation Rate Over Time</h3>
+          <p class="chart-subtitle">Percentage of new users who return on Day 1, 7, and 14</p>
+        </div>
+        <div class="chart-legend">
+          <span class="legend-item"><span class="legend-dot" style="background:var(--gray-30)"></span>50th Percentile</span>
+          <span class="legend-item"><span class="legend-dot" style="background:var(--color-periwinkle)"></span>75th Percentile</span>
+          <span class="legend-item"><span class="legend-dot" style="background:var(--color-blue)"></span>90th Percentile</span>
+        </div>
+        <div id="chart-act-line" class="chart-container" role="img" aria-label="Multi-line chart showing activation rates over days 1, 7, and 14"></div>
+      </div>
+
+      <!-- Chart E: Sankey — Activation vs Retention -->
+      <div class="chart-block">
+        <div class="chart-block__header">
+          <h3 class="chart-title">Activation vs. Retention</h3>
+          <p class="chart-subtitle">Win the first week, and you're far more likely to keep users for months.</p>
+        </div>
+        <div id="chart-act-sankey" class="chart-container chart-container--sankey" role="img" aria-label="Sankey diagram showing strong correlation between activation and retention quartiles"></div>
+        <div id="chart-act-sankey-mobile" class="chart-container chart-container--sankey-mobile" role="img" aria-label="Bar chart showing activation vs retention relationship on mobile"></div>
+        <div class="chart-insight chart-insight--positive">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="var(--color-blue)" stroke-width="1.5"/><path d="M5 8l2.5 2.5L11 5" stroke="var(--color-blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Strong positive correlation — 69% of top week-one activators became top 3-month retainers. The thick blue band at the top tells the story.
+        </div>
+      </div>
+    </div>
+    <div class="section-divider section-divider--bottom" aria-hidden="true"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 5 — ENGAGEMENT
+  ═══════════════════════════════════════ -->
+  <section id="engagement" class="section section--grey" aria-labelledby="engagement-headline">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">
+          <button class="share-btn" data-section="engagement" aria-label="Copy link to Engagement section">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8.5 1.5H12.5V5.5M12.5 1.5L6 8M5.5 3.5H2.5C1.95 3.5 1.5 3.95 1.5 4.5V11.5C1.5 12.05 1.95 12.5 2.5 12.5H9.5C10.05 12.5 10.5 12.05 10.5 11.5V8.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          04 — Engagement
+        </div>
+        <h2 id="engagement-headline" class="section-headline">Only <em class="stat-em">10%</em> of products account for <em class="stat-em">79%</em> of all user engagement.</h2>
+        <p class="section-def"><strong>Engagement</strong> — How sticky your product is: the percentage change in active users over time.</p>
+      </div>
+
+      <!-- Enterprise Toggle -->
+      <div class="enterprise-toggle-wrapper">
+        <div class="enterprise-toggle" role="group" aria-label="Toggle between all products and enterprise data">
+          <button class="toggle-btn toggle-btn--active" data-mode="all" id="eng-toggle-all">All Products</button>
+          <button class="toggle-btn" data-mode="enterprise" id="eng-toggle-ent">Enterprise</button>
+        </div>
+      </div>
+
+      <!-- Chart F: Grouped Bar -->
+      <div class="chart-block">
+        <div class="chart-block__header">
+          <h3 class="chart-title">Active User Growth Rate</h3>
+          <p class="chart-subtitle">Daily, weekly, and monthly active user growth across percentiles</p>
+        </div>
+        <div class="chart-legend">
+          <span class="legend-item"><span class="legend-dot" style="background:var(--gray-30)"></span>50th Percentile</span>
+          <span class="legend-item"><span class="legend-dot" style="background:var(--color-periwinkle)"></span>75th Percentile</span>
+          <span class="legend-item"><span class="legend-dot" style="background:var(--color-blue)"></span>90th Percentile</span>
+        </div>
+        <div id="chart-eng-bar" class="chart-container" role="img" aria-label="Grouped bar chart showing active user growth rates"></div>
+      </div>
+
+      <!-- Chart G: Dot Animation — Engagement Year -->
+      <div class="chart-block">
+        <div class="chart-block__header">
+          <h3 class="chart-title">Engagement Over a Year</h3>
+          <p class="chart-subtitle">Starting with 100 active users in January</p>
+        </div>
+        <div id="chart-eng-dots" class="chart-container chart-container--dots" role="img" aria-label="Animated dot visualization showing engagement growth over a year"></div>
+        <div class="chart-annotation">
+          <strong>238 vs 106</strong> — same starting point, one year later.
+        </div>
+      </div>
+
+      <!-- Chart H: Sankey — Engagement vs Retention -->
+      <div class="chart-block">
+        <div class="chart-block__header">
+          <h3 class="chart-title">Engagement vs. Retention</h3>
+          <p class="chart-subtitle">Does high engagement predict retention? Not as much as you'd think.</p>
+        </div>
+        <div id="chart-eng-sankey" class="chart-container chart-container--sankey" role="img" aria-label="Sankey diagram showing weak relationship between engagement and retention quartiles"></div>
+        <div id="chart-eng-sankey-mobile" class="chart-container chart-container--sankey-mobile" role="img" aria-label="Bar chart showing engagement vs retention relationship on mobile"></div>
+        <div class="chart-insight">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="var(--color-blue)" stroke-width="1.5"/><path d="M8 7v5M8 5v.5" stroke="var(--color-blue)" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Active users today doesn't guarantee retention tomorrow. Engagement distributes nearly evenly across retention quartiles.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 6 — RETENTION
+  ═══════════════════════════════════════ -->
+  <section id="retention" class="section section--light" aria-labelledby="retention-headline">
+    <div class="section-divider section-divider--top" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">
+          <button class="share-btn" data-section="retention" aria-label="Copy link to Retention section">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8.5 1.5H12.5V5.5M12.5 1.5L6 8M5.5 3.5H2.5C1.95 3.5 1.5 3.95 1.5 4.5V11.5C1.5 12.05 1.95 12.5 2.5 12.5H9.5C10.05 12.5 10.5 12.05 10.5 11.5V8.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          05 — Retention
+        </div>
+        <h2 id="retention-headline" class="section-headline"><em class="stat-em">96%</em> of the median group's new users churned by the end of Month 3.</h2>
+        <p class="section-def"><strong>Retention</strong> — The percentage of users who return in a given month after their first visit.</p>
+      </div>
+
+      <!-- Dual stat callout -->
+      <div class="dual-stat">
+        <div class="dual-stat__item">
+          <div class="dual-stat__num">4×</div>
+          <div class="dual-stat__label">higher retention rate for the top 10% at Month 1</div>
+        </div>
+        <div class="dual-stat__divider" aria-hidden="true"></div>
+        <div class="dual-stat__item">
+          <div class="dual-stat__num">26%</div>
+          <div class="dual-stat__label">Month 1 retention for top performers vs. 6.5% for the median</div>
+        </div>
+      </div>
+
+      <!-- Enterprise Toggle -->
+      <div class="enterprise-toggle-wrapper">
+        <div class="enterprise-toggle" role="group" aria-label="Toggle between all products and enterprise data">
+          <button class="toggle-btn toggle-btn--active" data-mode="all" id="ret-toggle-all">All Products</button>
+          <button class="toggle-btn" data-mode="enterprise" id="ret-toggle-ent">Enterprise</button>
+        </div>
+      </div>
+
+      <!-- Chart I: Retention Line -->
+      <div class="chart-block">
+        <div class="chart-block__header">
+          <h3 class="chart-title">Retention Rate Over 3 Months</h3>
+          <p class="chart-subtitle">Percentage of users who return in each month after their first visit</p>
+        </div>
+        <div class="chart-legend">
+          <span class="legend-item"><span class="legend-dot" style="background:var(--gray-30)"></span>50th Percentile</span>
+          <span class="legend-item"><span class="legend-dot" style="background:var(--color-periwinkle)"></span>75th Percentile</span>
+          <span class="legend-item"><span class="legend-dot" style="background:var(--color-blue)"></span>90th Percentile</span>
+        </div>
+        <div id="chart-ret-line" class="chart-container" role="img" aria-label="Multi-line chart showing retention rates over 3 months"></div>
+      </div>
+
+      <div class="chart-insight chart-insight--enterprise" id="ret-enterprise-callout" style="display:none;">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="var(--color-blue)" stroke-width="1.5"/><path d="M8 7v5M8 5v.5" stroke="var(--color-blue)" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Top-performing enterprise products retained <strong>25%</strong> of users at Month 3 — a 7× difference from the median enterprise (3.5%).
+      </div>
+    </div>
+    <div class="section-divider section-divider--bottom" aria-hidden="true"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 7 — INDUSTRY SNAPSHOT
+  ═══════════════════════════════════════ -->
+  <section id="industries" class="section section--grey" aria-labelledby="industries-headline">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">
+          <button class="share-btn" data-section="industries" aria-label="Copy link to Industries section">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M8.5 1.5H12.5V5.5M12.5 1.5L6 8M5.5 3.5H2.5C1.95 3.5 1.5 3.95 1.5 4.5V11.5C1.5 12.05 1.95 12.5 2.5 12.5H9.5C10.05 12.5 10.5 12.05 10.5 11.5V8.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          06 — Industry Snapshot
+        </div>
+        <h2 id="industries-headline" class="section-headline">Zoom in on your industry.</h2>
+        <p class="section-lead">Make even more informed decisions by seeing how your vertical benchmarks against the field.</p>
+      </div>
+
+      <!-- Industry tabs -->
+      <div class="industry-tabs" role="tablist" aria-label="Industry selector">
+        <button class="industry-tab industry-tab--active" role="tab" aria-selected="true"  aria-controls="industry-panel" data-industry="b2b-tech">
+          <span class="industry-tab__icon">💻</span> B2B Technology
+        </button>
+        <button class="industry-tab" role="tab" aria-selected="false" aria-controls="industry-panel" data-industry="ecommerce">
+          <span class="industry-tab__icon">🛍</span> Ecommerce
+        </button>
+        <button class="industry-tab" role="tab" aria-selected="false" aria-controls="industry-panel" data-industry="financial-services">
+          <span class="industry-tab__icon">🏦</span> Financial Services
+        </button>
+        <button class="industry-tab" role="tab" aria-selected="false" aria-controls="industry-panel" data-industry="healthcare">
+          <span class="industry-tab__icon">🏥</span> Healthcare
+        </button>
+        <button class="industry-tab" role="tab" aria-selected="false" aria-controls="industry-panel" data-industry="media">
+          <span class="industry-tab__icon">🎬</span> Media &amp; Entertainment
+        </button>
+        <button class="industry-tab industry-tab--standout" role="tab" aria-selected="false" aria-controls="industry-panel" data-industry="travel">
+          <span class="industry-tab__icon">✈️</span> Travel &amp; Hospitality
+          <span class="standout-badge">Top Performer</span>
+        </button>
+      </div>
+
+      <!-- Industry content panel -->
+      <div id="industry-panel" class="industry-panel" role="tabpanel" aria-label="Industry benchmark data">
+        <div class="industry-panel__header">
+          <div>
+            <h3 class="industry-panel__name" id="industry-name">B2B Technology</h3>
+            <div class="industry-panel__protip" id="industry-protip"></div>
+          </div>
+          <div class="industry-callout" id="industry-callout" style="display:none;"></div>
+        </div>
+
+        <div class="industry-charts">
+          <!-- Acquisition comparison -->
+          <div class="industry-chart-group">
+            <div class="industry-chart-label">Monthly Acquisition Growth</div>
+            <div class="industry-bar-group" id="ind-acq-bars">
+              <div class="industry-bar-row">
+                <span class="industry-bar-pct-label">50th</span>
+                <div class="industry-bar-track">
+                  <div class="industry-bar industry-bar--p50" id="ind-acq-p50"></div>
+                </div>
+                <span class="industry-bar-val" id="ind-acq-p50-val">0%</span>
+              </div>
+              <div class="industry-bar-row">
+                <span class="industry-bar-pct-label">75th</span>
+                <div class="industry-bar-track">
+                  <div class="industry-bar industry-bar--p75" id="ind-acq-p75"></div>
+                </div>
+                <span class="industry-bar-val" id="ind-acq-p75-val">0%</span>
+              </div>
+              <div class="industry-bar-row">
+                <span class="industry-bar-pct-label">90th</span>
+                <div class="industry-bar-track">
+                  <div class="industry-bar industry-bar--p90" id="ind-acq-p90"></div>
+                </div>
+                <span class="industry-bar-val" id="ind-acq-p90-val">0%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Retention comparison -->
+          <div class="industry-chart-group">
+            <div class="industry-chart-label">3-Month Retention</div>
+            <div class="industry-bar-group" id="ind-ret-bars">
+              <div class="industry-bar-row">
+                <span class="industry-bar-pct-label">50th</span>
+                <div class="industry-bar-track">
+                  <div class="industry-bar industry-bar--p50" id="ind-ret-p50"></div>
+                </div>
+                <span class="industry-bar-val" id="ind-ret-p50-val">0%</span>
+              </div>
+              <div class="industry-bar-row">
+                <span class="industry-bar-pct-label">75th</span>
+                <div class="industry-bar-track">
+                  <div class="industry-bar industry-bar--p75" id="ind-ret-p75"></div>
+                </div>
+                <span class="industry-bar-val" id="ind-ret-p75-val">0%</span>
+              </div>
+              <div class="industry-bar-row">
+                <span class="industry-bar-pct-label">90th</span>
+                <div class="industry-bar-track">
+                  <div class="industry-bar industry-bar--p90" id="ind-ret-p90"></div>
+                </div>
+                <span class="industry-bar-val" id="ind-ret-p90-val">0%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 8 — CTA
+  ═══════════════════════════════════════ -->
+  <section id="cta" class="section section--dark" aria-labelledby="cta-headline">
+    <div class="cta-bg-gradient" aria-hidden="true"></div>
+    <div class="container">
+      <div class="cta-content">
+        <h2 id="cta-headline" class="cta-headline">Create experiences<br>that customers love</h2>
+        <p class="cta-subhead">Amplitude gives you the real-time insights to quickly prove product value and keep users coming back.</p>
+        <div class="cta-buttons">
+          <a href="/Users/noorisingh/Downloads/the-product-benchmark-report.pdf" download class="btn btn--primary btn--large">Read the Report</a>
+          <a href="https://amplitude.com/sales-contact" target="_blank" rel="noopener noreferrer" class="btn btn--outline-white btn--large">Talk to Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 9 — METHODOLOGY
+  ═══════════════════════════════════════ -->
+  <section id="methodology" class="section section--light section--compact" aria-labelledby="methodology-headline">
+    <div class="section-divider section-divider--top" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-label">08 — How We Built This</div>
+      <h2 id="methodology-headline" class="section-headline section-headline--sm">Rigorous data. Trustworthy benchmarks.</h2>
+      <p class="methodology-intro">Amplitude's behavioral database tracks billions of users across thousands of digital products. We analyzed and anonymized performance and engagement data across industries, regions, and company sizes. Data spanned September 2023 to September 2024.</p>
+
+      <div class="methodology-stats" aria-label="Methodology statistics">
+        <div class="method-stat">
+          <div class="method-stat__num">2,600+</div>
+          <div class="method-stat__label">Companies</div>
+        </div>
+        <div class="method-stat">
+          <div class="method-stat__num">10,600+</div>
+          <div class="method-stat__label">Digital Products</div>
+        </div>
+        <div class="method-stat">
+          <div class="method-stat__num">17</div>
+          <div class="method-stat__label">Industries</div>
+        </div>
+        <div class="method-stat">
+          <div class="method-stat__num">171B</div>
+          <div class="method-stat__label">Monthly Users</div>
+        </div>
+        <div class="method-stat">
+          <div class="method-stat__num">102</div>
+          <div class="method-stat__label">Countries</div>
+        </div>
+        <div class="method-stat">
+          <div class="method-stat__num">93B</div>
+          <div class="method-stat__label">New Users</div>
+        </div>
+      </div>
+
+      <p class="methodology-note">To ensure data accuracy, we ran rigorous quality checks, avoided imputation, and applied z-score-based local baseline methods to remove outliers. We excluded data from customers who opted out of benchmarking. Enterprise is defined as organizations with more than 2,000 employees in the Americas and more than 1,500 internationally.</p>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">amplitude</span>
+        <span class="footer-copy">&copy;2025 Amplitude, Inc. All rights reserved.</span>
+        <span class="footer-data-period">Data period: September 2023 – September 2024</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast for share notification -->
+  <div id="share-toast" class="share-toast" role="status" aria-live="polite"></div>
+
+  <!-- ── SCRIPTS ── -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script type="module" src="data.js"></script>
+  <script type="module" src="charts.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
